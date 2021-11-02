@@ -1,0 +1,316 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.18f1 (a7d1c678663c) revision 10998214'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1288; Version 2009; 64bit' Language: 'sr' Physical Memory: 8066 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/palad/Documents/GitHub/ORDI-Igra/ORDI - Escape room
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+58290
+Successfully changed project path to: C:/Users/palad/Documents/GitHub/ORDI-Igra/ORDI - Escape room
+C:/Users/palad/Documents/GitHub/ORDI-Igra/ORDI - Escape room
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 79.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.18f1 (a7d1c678663c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/palad/Documents/GitHub/ORDI-Igra/ORDI - Escape room/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
+    Vendor:   
+    VRAM:     4033 MB
+    Driver:   27.20.100.8729
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56776
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005802 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 172.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.412 seconds
+Domain Reload Profiling:
+	ReloadAssembly (6413ms)
+		BeginReloadAssembly (120ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (1821ms)
+			LoadAssemblies (119ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (628ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (174ms)
+			SetupLoadedEditorAssemblies (742ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (173ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (359ms)
+				ProcessInitializeOnLoadMethodAttributes (110ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.020152 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.138 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4141ms)
+		BeginReloadAssembly (629ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (20ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (66ms)
+		EndReloadAssembly (3269ms)
+			LoadAssemblies (442ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1161ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (189ms)
+			SetupLoadedEditorAssemblies (1184ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (18ms)
+				SetLoadedEditorAssemblies (3ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (271ms)
+				ProcessInitializeOnLoadAttributes (851ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (23ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (24ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.19 seconds
+Refreshing native plugins compatible for Editor in 1.23 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1619 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.4 MB.
+System memory in use after: 85.1 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2059.
+Total: 9.298400 ms (FindLiveObjects: 0.291300 ms CreateObjectMapping: 0.099400 ms MarkObjects: 7.872600 ms  DeleteObjects: 1.030900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/Lvl1.unity
+  artifactKey: Guid(96467dccde523db44af954937c470560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Lvl1.unity using Guid(96467dccde523db44af954937c470560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76a003ee3e19814ba2d4a13f4d68924c') in 0.048073 seconds 
+  Import took 0.060259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 51.268622 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Kitchen
+  artifactKey: Guid(4b8d7ab6fb164e041ba93a961f93a728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Kitchen using Guid(4b8d7ab6fb164e041ba93a961f93a728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c28fe41ac8fac962d6172e84f4fb2b70') in 0.004896 seconds 
+  Import took 0.011786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.647274 seconds.
+  path: Assets/SampleScenes
+  artifactKey: Guid(3d8829ac873af27488b1412b8db301ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SampleScenes using Guid(3d8829ac873af27488b1412b8db301ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef1142f46e2c410b6040e8c75a1090c0') in 0.004530 seconds 
+  Import took 0.022395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.164265 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration
+  artifactKey: Guid(054dc4b1218e51d42ae15ce5b2634d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration using Guid(054dc4b1218e51d42ae15ce5b2634d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '526cf3070f419ad02c398fcd5d8588b1') in 0.006412 seconds 
+  Import took 0.013360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002398 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration
+  artifactKey: Guid(054dc4b1218e51d42ae15ce5b2634d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration using Guid(054dc4b1218e51d42ae15ce5b2634d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '526cf3070f419ad02c398fcd5d8588b1') in 0.006588 seconds 
+  Import took 0.015825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.084871 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration/Curtain.prefab
+  artifactKey: Guid(7b6a6dd10c95e82468a8a0d28b9dc433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration/Curtain.prefab using Guid(7b6a6dd10c95e82468a8a0d28b9dc433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b028cccefd8c621c12798768a4926696') in 0.486155 seconds 
+  Import took 0.503785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001004 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration/Frame3.prefab
+  artifactKey: Guid(2b00a210036f30049bab5eb8cad9fd4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration/Frame3.prefab using Guid(2b00a210036f30049bab5eb8cad9fd4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78ae96db38f161245618641052d991e0') in 0.032380 seconds 
+  Import took 0.050925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001116 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration/Frame1.prefab
+  artifactKey: Guid(062bfc87662647d43951377bb4b671f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration/Frame1.prefab using Guid(062bfc87662647d43951377bb4b671f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79205a586b7761d50b4d79010024b2e7') in 0.195448 seconds 
+  Import took 0.211946 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000734 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration/Plant2.prefab
+  artifactKey: Guid(2e2ab467fad9033438c76e2c50d6661c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration/Plant2.prefab using Guid(2e2ab467fad9033438c76e2c50d6661c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85dcd8592a2800ae2d6ebb602a2f86ff') in 0.085506 seconds 
+  Import took 0.101018 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000422 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration/Lamp2.prefab
+  artifactKey: Guid(2b1ab68e56742254994b99a6e7cacadb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Decoration/Lamp2.prefab using Guid(2b1ab68e56742254994b99a6e7cacadb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5982ec162438fc4ffff99a83d07126d') in 0.104425 seconds 
+  Import took 0.120121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.484703 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/BedRoom
+  artifactKey: Guid(4b01adc68a6b1394a99bbed3150ae8ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/BedRoom using Guid(4b01adc68a6b1394a99bbed3150ae8ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00ab90ceb3275cc35e202eba7fadf9cf') in 0.010119 seconds 
+  Import took 0.022914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.064807 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/BedRoom/Bed.prefab
+  artifactKey: Guid(dd3313ee9ee86d24193cf54a44a430f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/BedRoom/Bed.prefab using Guid(dd3313ee9ee86d24193cf54a44a430f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53e78677c071ec682bf88eb93a3fda3b') in 0.171442 seconds 
+  Import took 0.183226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001071 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/BedRoom/Pilled.prefab
+  artifactKey: Guid(2d0113c80f53cad4d930cf66cc308d1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/BedRoom/Pilled.prefab using Guid(2d0113c80f53cad4d930cf66cc308d1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e255a8a7e80aab6220ca852f249eadb4') in 0.134554 seconds 
+  Import took 0.145341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000423 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/BedRoom/Drawer.prefab
+  artifactKey: Guid(7f18227a94106cd4885511dc014b3d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/BedRoom/Drawer.prefab using Guid(7f18227a94106cd4885511dc014b3d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b784e6f74a6d157f3922c56b64f4ec9e') in 0.045741 seconds 
+  Import took 0.052578 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000489 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/BedRoom/TableLamp.prefab
+  artifactKey: Guid(d99127f63ce55ac4a914d0109c66460e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/BedRoom/TableLamp.prefab using Guid(d99127f63ce55ac4a914d0109c66460e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57746f9728beb376987ec1f6d782d4f6') in 1.026730 seconds 
+  Import took 1.038075 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 358.270239 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Extras
+  artifactKey: Guid(8b17e7a070e2b01449606df916978232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/Extras using Guid(8b17e7a070e2b01449606df916978232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fe481999d626e3da03e13807cc8b260') in 0.004876 seconds 
+  Import took 0.037490 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 297.618007 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/LivingRoom
+  artifactKey: Guid(532d7f806813a934a81c723edcaf6f07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/LivingRoom using Guid(532d7f806813a934a81c723edcaf6f07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '410182533d43185a436ff4c308211e0b') in 0.030765 seconds 
+  Import took 0.036738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 227.907001 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Example
+  artifactKey: Guid(65448ce9275ffd64e8ed112e30ab932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Example using Guid(65448ce9275ffd64e8ed112e30ab932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3c27bb504567e8e97bdeda4d20a3605') in 0.004730 seconds 
+  Import took 0.012615 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003832 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Example
+  artifactKey: Guid(65448ce9275ffd64e8ed112e30ab932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Example using Guid(65448ce9275ffd64e8ed112e30ab932b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3c27bb504567e8e97bdeda4d20a3605') in 0.005378 seconds 
+  Import took 0.012170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.054791 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Example/LightingData.asset
+  artifactKey: Guid(cebeaa991f3be3949a7f85f3e0c090d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Example/LightingData.asset using Guid(cebeaa991f3be3949a7f85f3e0c090d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '583cb4da33db0ab250f28b0aebcf6a07') in 0.027232 seconds 
+  Import took 0.032540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000936 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Example/OcclusionCullingData.asset
+  artifactKey: Guid(1a719b6a80022b04a881346affd5343c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Example/OcclusionCullingData.asset using Guid(1a719b6a80022b04a881346affd5343c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb463e087670fbbbca813c77e939c59f') in 0.016703 seconds 
+  Import took 0.022350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000454 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Example/ReflectionProbe-0.exr
+  artifactKey: Guid(a9d257d5592b93e4db431943df831b8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Example/ReflectionProbe-0.exr using Guid(a9d257d5592b93e4db431943df831b8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3446a2d8115c2cf8b85a004c3f92c4dd') in 0.118007 seconds 
+  Import took 0.124261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.671344 seconds.
+  path: Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/DinnerRoom
+  artifactKey: Guid(e9db6166b0249ce428f8fc59a83dc5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VIRTI/VOXEL-Forniture-FREE/Prefabs/DinnerRoom using Guid(e9db6166b0249ce428f8fc59a83dc5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73070540829c2fe0d3a9c22531f63c33') in 0.003861 seconds 
+  Import took 0.016432 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
