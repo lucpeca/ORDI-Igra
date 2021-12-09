@@ -3,7 +3,36 @@ guid: 721c474569233384db2bf329f0712023
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Material1: {fileID: 2100000, guid: 9335c65f42a781d4c881b93bec5412b9, type: 2}
+  - Material2: {fileID: 2100000, guid: 735665606fda0c14cb12bc536aa26dc7, type: 2}
+  - Canvas: {instanceID: 0}
+  - button0: {instanceID: 0}
+  - button1: {instanceID: 0}
+  - button2: {instanceID: 0}
+  - button3: {instanceID: 0}
+  - button4: {instanceID: 0}
+  - button5: {instanceID: 0}
+  - button6: {instanceID: 0}
+  - button7: {instanceID: 0}
+  - button8: {instanceID: 0}
+  - button9: {instanceID: 0}
+  - button10: {instanceID: 0}
+  - button11: {instanceID: 0}
+  - button12: {instanceID: 0}
+  - button13: {instanceID: 0}
+  - button14: {instanceID: 0}
+  - button15: {instanceID: 0}
+  - button16: {instanceID: 0}
+  - button17: {instanceID: 0}
+  - button18: {instanceID: 0}
+  - button19: {instanceID: 0}
+  - button20: {instanceID: 0}
+  - button21: {instanceID: 0}
+  - button22: {instanceID: 0}
+  - button23: {instanceID: 0}
+  - button24: {instanceID: 0}
+  - button25: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
