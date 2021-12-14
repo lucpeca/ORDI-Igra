@@ -1100,6 +1100,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530554791}
   m_CullTransparentMesh: 1
+--- !u!1 &554543434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554543436}
+  - component: {fileID: 554543435}
+  m_Layer: 0
+  m_Name: skripte
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &554543435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554543434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721c474569233384db2bf329f0712023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Canvas: {fileID: 1721005788}
+  buttons: []
+--- !u!4 &554543436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554543434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 337.12177, y: 177.81006, z: 6.534033}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &577387364
 GameObject:
   m_ObjectHideFlags: 0
@@ -4228,39 +4273,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721005785}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 721c474569233384db2bf329f0712023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Material1: {fileID: 2100000, guid: 9335c65f42a781d4c881b93bec5412b9, type: 2}
-  Material2: {fileID: 2100000, guid: 735665606fda0c14cb12bc536aa26dc7, type: 2}
   Canvas: {fileID: 1721005788}
-  button0: {fileID: 969917694}
-  button1: {fileID: 1160272410}
-  button2: {fileID: 1947326733}
-  button3: {fileID: 1595047088}
-  button4: {fileID: 1599971216}
-  button5: {fileID: 0}
-  button6: {fileID: 0}
-  button7: {fileID: 0}
-  button8: {fileID: 0}
-  button9: {fileID: 0}
-  button10: {fileID: 0}
-  button11: {fileID: 0}
-  button12: {fileID: 0}
-  button13: {fileID: 0}
-  button14: {fileID: 0}
-  button15: {fileID: 0}
-  button16: {fileID: 0}
-  button17: {fileID: 0}
-  button18: {fileID: 0}
-  button19: {fileID: 0}
-  button20: {fileID: 0}
-  button21: {fileID: 0}
-  button22: {fileID: 0}
-  button23: {fileID: 0}
-  button24: {fileID: 0}
   buttons: []
 --- !u!1 &1737771663
 GameObject:
