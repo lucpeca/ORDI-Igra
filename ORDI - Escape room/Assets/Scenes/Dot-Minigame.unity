@@ -2149,7 +2149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.0703907, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4236,32 +4236,32 @@ MonoBehaviour:
   Material1: {fileID: 2100000, guid: 9335c65f42a781d4c881b93bec5412b9, type: 2}
   Material2: {fileID: 2100000, guid: 735665606fda0c14cb12bc536aa26dc7, type: 2}
   Canvas: {fileID: 1721005788}
-  button0: {fileID: 969917692}
-  button1: {fileID: 1160272408}
-  button2: {fileID: 1947326731}
-  button3: {fileID: 1595047086}
-  button4: {fileID: 1599971214}
-  button5: {fileID: 300374754}
-  button6: {fileID: 401779143}
-  button7: {fileID: 1119238657}
-  button8: {fileID: 437807549}
-  button9: {fileID: 266896110}
-  button10: {fileID: 1068534879}
-  button11: {fileID: 1438877775}
-  button12: {fileID: 2027125212}
-  button13: {fileID: 1882956816}
-  button14: {fileID: 1953514253}
-  button15: {fileID: 1074865204}
-  button16: {fileID: 650356302}
-  button17: {fileID: 1349106594}
-  button18: {fileID: 955613311}
-  button19: {fileID: 530554791}
-  button20: {fileID: 1636856423}
-  button21: {fileID: 264615832}
-  button22: {fileID: 1783840155}
-  button23: {fileID: 1938044383}
-  button24: {fileID: 1622828283}
-  button25: {fileID: 0}
+  button0: {fileID: 969917694}
+  button1: {fileID: 1160272410}
+  button2: {fileID: 1947326733}
+  button3: {fileID: 1595047088}
+  button4: {fileID: 1599971216}
+  button5: {fileID: 0}
+  button6: {fileID: 0}
+  button7: {fileID: 0}
+  button8: {fileID: 0}
+  button9: {fileID: 0}
+  button10: {fileID: 0}
+  button11: {fileID: 0}
+  button12: {fileID: 0}
+  button13: {fileID: 0}
+  button14: {fileID: 0}
+  button15: {fileID: 0}
+  button16: {fileID: 0}
+  button17: {fileID: 0}
+  button18: {fileID: 0}
+  button19: {fileID: 0}
+  button20: {fileID: 0}
+  button21: {fileID: 0}
+  button22: {fileID: 0}
+  button23: {fileID: 0}
+  button24: {fileID: 0}
+  buttons: []
 --- !u!1 &1737771663
 GameObject:
   m_ObjectHideFlags: 0
