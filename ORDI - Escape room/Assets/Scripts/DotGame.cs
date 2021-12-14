@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DotGame : MonoBehaviour
 {
@@ -68,7 +69,7 @@ public class DotGame : MonoBehaviour
 
         foreach (Button btn in buttons)
         {
-            btn.GetComponent<Image>().color = Color.red;
+            btn.GetComponent<Image>().color = Color.green;
             btn.onClick.AddListener(() => ChangeColor(btn));
         }
 
@@ -91,6 +92,9 @@ public class DotGame : MonoBehaviour
         ChangeColor(buttons[xcount]);
         xcount = Random.Range(0, 25);
         ChangeColor(buttons[xcount]);
+        xcount = Random.Range(0, 25);
+        ChangeColor(buttons[xcount]);
+        xcount = Random.Range(0, 25);
 
     }
 
@@ -105,7 +109,7 @@ public class DotGame : MonoBehaviour
         }
         if (done == 25)
         {
-
+            SceneManager.LoadScene("Escape Rooms");
         }
 
     }
@@ -127,7 +131,7 @@ public class DotGame : MonoBehaviour
         else {
             btn.GetComponent<Image>().color = Color.red;
         }
-        if (y > 0)
+        if (y > 0 && y != 5 && y != 10 && y != 15 && y != 20 )
         {
             if (buttons[y - 1] != null)
             {
@@ -141,7 +145,7 @@ public class DotGame : MonoBehaviour
                 }
             }
         }
-        if (y < 24)
+        if (y < 24 && y != 19 && y != 14 && y!=9 && y!=4)
         {
             if (buttons[y + 1] != null)
             {
