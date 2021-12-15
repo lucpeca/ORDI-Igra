@@ -17,7 +17,8 @@ public class MinigameStarter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (entered == true && Input.GetKeyDown("q")) {
+        if (entered == true && Input.GetKeyDown("e")) {
+            //GetComponent<PlayerMovement>().enabled = false;
             SceneManager.LoadScene("DotMinigame");
         }
     }

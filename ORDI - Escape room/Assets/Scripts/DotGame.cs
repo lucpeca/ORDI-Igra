@@ -15,6 +15,7 @@ public class DotGame : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
         Button button0 = Canvas.transform.GetChild(1).gameObject.GetComponent<Button>();
         Button button1 = Canvas.transform.GetChild(2).gameObject.GetComponent<Button>();
         Button button2 = Canvas.transform.GetChild(3).gameObject.GetComponent<Button>();
@@ -101,6 +102,7 @@ public class DotGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Cursor.visible = true;
         int done = 0;
         foreach (Button btn in buttons) {
             if (btn.GetComponent<Image>().color == Color.green) {
