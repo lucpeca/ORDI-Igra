@@ -11,6 +11,7 @@ public class DotGame : MonoBehaviour
 
     public List<Button> buttons;
 
+    public static bool won = false;
 
 
     void Start()
@@ -109,8 +110,9 @@ public class DotGame : MonoBehaviour
                 done++;
             }
         }
-        if (done == 25)
+        if (done == 25 || won == true)
         {
+            won = true;
             SceneManager.LoadScene("Escape Rooms");
         }
 

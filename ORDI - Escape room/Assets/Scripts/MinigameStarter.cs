@@ -11,6 +11,11 @@ public class MinigameStarter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.Find("Dot-Minigame-Start").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.red;
+        if (DotGame.won == true)
+        {
+            GameObject.Find("Dot-Minigame-Start").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.green;
+        }
         GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
     }
 
@@ -25,7 +30,7 @@ public class MinigameStarter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == Minigame1)
+        if (other.gameObject == Minigame1 && DotGame.won == false)
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
             entered = true;
