@@ -16,7 +16,6 @@ public class DotGame : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.None;
         Button button0 = Canvas.transform.GetChild(1).gameObject.GetComponent<Button>();
         Button button1 = Canvas.transform.GetChild(2).gameObject.GetComponent<Button>();
         Button button2 = Canvas.transform.GetChild(3).gameObject.GetComponent<Button>();
@@ -103,6 +102,8 @@ public class DotGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         int done = 0;
         foreach (Button btn in buttons) {
@@ -113,7 +114,14 @@ public class DotGame : MonoBehaviour
         if (done == 25 || won == true)
         {
             won = true;
-            SceneManager.LoadScene("Escape Rooms");
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("Dot-Minigame-Start").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.green;
+            GameObject.Find("First Person Player").gameObject.GetComponent<PlayerMovement>().enabled = true;
+            GameObject.Find("First Person Player").gameObject.transform.GetChild(1)
+                .GetComponent<MouseLook>().enabled = true;
+            Canvas.gameObject.SetActive(false);
         }
 
     }

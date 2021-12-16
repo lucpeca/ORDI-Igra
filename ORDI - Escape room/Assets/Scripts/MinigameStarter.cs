@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MinigameStarter : MonoBehaviour
 {
+    public Canvas Canvas1;
     public GameObject Minigame1;
     private bool entered = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.Find("skripte").gameObject.GetComponent<DotGame>().enabled = false;
         GameObject.Find("Dot-Minigame-Start").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.red;
         if (DotGame.won == true)
         {
@@ -23,8 +25,10 @@ public class MinigameStarter : MonoBehaviour
     void Update()
     {
         if (entered == true && Input.GetKeyDown("e")) {
-            //GetComponent<PlayerMovement>().enabled = false;
-            SceneManager.LoadScene("DotMinigame");
+            GetComponent<PlayerMovement>().enabled = false;
+            this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
+            GameObject.Find("skripte").gameObject.GetComponent<DotGame>().enabled = true;
+            Canvas1.gameObject.SetActive(true);
         }
     }
 
