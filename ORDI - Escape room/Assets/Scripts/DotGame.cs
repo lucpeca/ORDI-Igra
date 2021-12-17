@@ -119,7 +119,7 @@ public class DotGame : MonoBehaviour
         {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-            GameObject.Find("Dot-Minigame-Start").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.green;
+            GameObject.Find("Dot-Minigame-Start").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.red;
             GameObject.Find("First Person Player").gameObject.GetComponent<PlayerMovement>().enabled = true;
             GameObject.Find("First Person Player").gameObject.transform.GetChild(1)
                 .GetComponent<MouseLook>().enabled = true;
