@@ -12,6 +12,7 @@ public class DotGame : MonoBehaviour
     public List<Button> buttons;
 
     public static bool won = false;
+    public bool winonce = false;
 
 
     void Start()
@@ -102,21 +103,36 @@ public class DotGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        if (won == false)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
         int done = 0;
         foreach (Button btn in buttons) {
             if (btn.GetComponent<Image>().color == Color.green) {
                 done++;
             }
         }
-        if (done == 25 || won == true)
+
+        if (Input.GetKeyDown("t"))
         {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            GameObject.Find("Dot-Minigame-Start").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.green;
+            GameObject.Find("First Person Player").gameObject.GetComponent<PlayerMovement>().enabled = true;
+            GameObject.Find("First Person Player").gameObject.transform.GetChild(1)
+                .GetComponent<MouseLook>().enabled = true;
+            Canvas.gameObject.SetActive(false);
+            GameObject.Find("skripte").gameObject.GetComponent<DotGame>().enabled = false;
+
+        }
+        if (done==25 && winonce == false)
+        {
+            winonce = true;
             won = true;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("Dot-Minigame-Start").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.green;
             GameObject.Find("First Person Player").gameObject.GetComponent<PlayerMovement>().enabled = true;
             GameObject.Find("First Person Player").gameObject.transform.GetChild(1)
