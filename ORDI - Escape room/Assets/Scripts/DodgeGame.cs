@@ -19,6 +19,7 @@ public class DodgeGame : MonoBehaviour
 
     public static bool won = false;
     public bool winonce = false;
+    public float speed;
 
 
 
@@ -29,13 +30,7 @@ public class DodgeGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (RectTransform move in Enpos)
-        {
-            transform.Translate(0f, speed, 0f);
-            if (move.position.y < -move.rect.height)
-                transform.position = new Vector3(startingPosition.x,
-                    canvas.rect.height + move.rect.height, startingPosition.z);
-        }
+     //
         
 
         

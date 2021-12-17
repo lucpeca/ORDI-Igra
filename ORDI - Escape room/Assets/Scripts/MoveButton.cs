@@ -20,7 +20,6 @@ public class MoveButton : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(transform.position.y);
         if (transform.position.y < 165) {
             speed = -speed;
         }
