@@ -14,16 +14,16 @@ public class MoveButton : MonoBehaviour
         button = gameObject.GetComponent<RectTransform>();
         canvas = GameObject.Find("CanvasLab").GetComponent<RectTransform>();
         startingPosition = transform.position;
-        int xcount = Random.Range(5, 15);
+        int xcount = Random.Range(1, 3);
         speed = xcount;
     }
 
     void Update()
     {
-        if (transform.position.y < 165) {
+        if (transform.position.y < 300) {
             speed = -speed;
         }
-        if (transform.position.y > 645)
+        if (transform.position.y > 775)
         {
             speed = -speed;
         }

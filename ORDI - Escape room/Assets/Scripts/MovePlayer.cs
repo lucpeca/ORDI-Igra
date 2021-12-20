@@ -17,7 +17,7 @@ public class MovePlayer : MonoBehaviour
         button = gameObject.GetComponent<RectTransform>();
         canvas = GameObject.Find("CanvasLab").GetComponent<RectTransform>();
         startingPosition = transform.position;
-        speed = 5;
+        speed = 1.2f;
     }
 
     void Update()
@@ -36,7 +36,7 @@ public class MovePlayer : MonoBehaviour
 
         if (won == true && winonce == false) {
             winonce = true;
-            GameObject.Find("Dodge-minigame").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.red;
+            GameObject.Find("Dodge-minigame").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.green;
             GameObject.Find("First Person Player").gameObject.GetComponent<PlayerMovement>().enabled = true;
             GameObject.Find("First Person Player").gameObject.transform.GetChild(1)
                 .GetComponent<MouseLook>().enabled = true;
@@ -67,7 +67,7 @@ public class MovePlayer : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.name == "Win")
         {

@@ -57,6 +57,7 @@ public class MinigameStarter : MonoBehaviour
             this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
             GameObject.Find("skripte").gameObject.GetComponent<DodgeGame>().enabled = true;
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            Canvas3.gameObject.transform.GetChild(3).GetComponent<MovePlayer>().enabled = true;
             Canvas3.gameObject.SetActive(true);
         }
 
@@ -76,7 +77,7 @@ public class MinigameStarter : MonoBehaviour
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
             entered2 = true;
         }
-        if (other.gameObject == Minigame3 && DodgeGame.won == false)
+        if (other.gameObject == Minigame3 && MovePlayer.won == false)
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
             entered3 = true;
