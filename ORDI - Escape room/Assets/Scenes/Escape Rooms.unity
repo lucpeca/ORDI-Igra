@@ -209,9 +209,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "A stove is a device that burns fuel or\nuses electricity to generate heat
-    inside\nor on top of the apparatus. \nIt has seen many developments over\ntime
-    and serves the main purpose of cooking food."
+  m_Text: 'A door''s essential and primary purpose is
+
+    to provide security by
+    controlling access
+
+    to the doorway. This door seems to open
+
+    after you
+    finish all the puzzles in the room'
 --- !u!222 &11580433
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2579,7 +2585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &238611488
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2647,9 +2653,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "A stove is a device that burns fuel or\nuses electricity to generate heat
-    inside\nor on top of the apparatus. \nIt has seen many developments over\ntime
-    and serves the main purpose of cooking food."
+  m_Text: "Fire extinguisher is an active fire protection device\nused to extinguish
+    or control small fires,\noften in emergency situations.\n\nRemember where the
+    fire extinguisher is \nin case you set something on fire"
 --- !u!222 &238611491
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11775,9 +11781,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "A stove is a device that burns fuel or\nuses electricity to generate heat
-    inside\nor on top of the apparatus. \nIt has seen many developments over\ntime
-    and serves the main purpose of cooking food."
+  m_Text: "A computer monitor is an output device\nthat displays information in pictorial
+    or text form. \nThese monitors are not showing any usefull information it seems."
 --- !u!222 &1124536439
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13744,9 +13749,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "A stove is a device that burns fuel or\nuses electricity to generate heat
-    inside\nor on top of the apparatus. \nIt has seen many developments over\ntime
-    and serves the main purpose of cooking food."
+  m_Text: 'PC is a multi-purpose computer whose size, capabilities,
+
+    and price
+    make it feasible for individual use. This one seems
+
+    to be turned on, but
+    why?'
 --- !u!222 &1289054545
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19021,9 +19030,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "A stove is a device that burns fuel or\nuses electricity to generate heat
-    inside\nor on top of the apparatus. \nIt has seen many developments over\ntime
-    and serves the main purpose of cooking food."
+  m_Text: "Server is a piece of computer hardware\nthat provides functionality for
+    other programs or devices, \ncalled \"clients\"."
 --- !u!222 &1793537921
 CanvasRenderer:
   m_ObjectHideFlags: 0
