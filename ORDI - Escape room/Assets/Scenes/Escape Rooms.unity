@@ -2585,7 +2585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &238611488
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5333,6 +5333,7 @@ MonoBehaviour:
   Canvas1: {fileID: 1870901756}
   Canvas2: {fileID: 1931526999}
   Canvas3: {fileID: 1080279246}
+  InfoCanvas: {fileID: 465616899}
   Minigame1: {fileID: 1437022811}
   Minigame2: {fileID: 1835067167}
   Minigame3: {fileID: 1897555079}
