@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using UnityEngine.SceneManagement;
 
 public class MinigameStarter : MonoBehaviour
@@ -19,24 +20,9 @@ public class MinigameStarter : MonoBehaviour
     private bool entered2 = false;
     private bool entered3 = false;
 
-    private bool info1 = false;
-    private bool info2 = false;
-    private bool info3 = false;
-    private bool info4 = false;
-    private bool info5 = false;
-    private bool info6 = false;
-    private bool info7 = false;
-    private bool info8 = false;
-    private bool info9 = false;
-    private bool info10 = false;
-    private bool info11 = false;
-    private bool info12 = false;
-    private bool info13 = false;
-    private bool info14 = false;
-    private bool info15 = false;
+    private List<bool> info = new List<bool>();
 
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +33,10 @@ public class MinigameStarter : MonoBehaviour
         GameObject.Find("Counter-minigame").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.red;
         GameObject.Find("Dodge-minigame").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.red;
         GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        foreach (int value in Enumerable.Range(1, 15))
+        {
+            info.Add(false);
+        }
     }
 
     // Update is called once per frame
@@ -81,12 +71,25 @@ public class MinigameStarter : MonoBehaviour
             Canvas3.gameObject.transform.GetChild(3).GetComponent<MovePlayer>().enabled = true;
             Canvas3.gameObject.SetActive(true);
         }
-        if (info1 == true && Input.GetKeyDown("e"))
-        {
-            GetComponent<PlayerMovement>().enabled = false;
-            this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
-            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            InfoCanvas.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+
+
+        foreach (int value in Enumerable.Range(1, 15)) {
+            if (info[value - 1] == true && Input.GetKeyDown("t"))
+            {
+                GetComponent<PlayerMovement>().enabled = true;
+                this.transform.GetChild(1).GetComponent<MouseLook>().enabled = true;
+                GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                InfoCanvas.gameObject.transform.GetChild(value).gameObject.SetActive(false);
+            }
+
+            if (info[value - 1] == true && Input.GetKeyDown("e"))
+            {
+                GetComponent<PlayerMovement>().enabled = false;
+                this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
+                GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                InfoCanvas.gameObject.transform.GetChild(value).gameObject.SetActive(true);
+            }
+
         }
 
 
@@ -112,29 +115,78 @@ public class MinigameStarter : MonoBehaviour
         }
         if (other.gameObject.name.Contains("axe")) {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            info1 = true;
+            info[0] = true;
         }
         if (other.gameObject.name.Contains("shield"))
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            info2 = true;
+            info[1] = true;
         }
         if (other.gameObject.name.Contains("glass"))
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            info3 = true;
+            info[2] = true;
         }
         if (other.gameObject.name.Contains("jug"))
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            info4 = true;
+            info[3] = true;
         }
         if (other.gameObject.name.Contains("Plate"))
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            info5 = true;
+            info[4] = true;
         }
-        // -> TO DO ostalih 10 predmeta 
+        if (other.gameObject.name.Contains("bookcase"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            info[5] = true;
+        }
+        if (other.gameObject.name.Contains("Fireplace"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            info[6] = true;
+        }
+        if (other.gameObject.name.Contains("Curtain"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            info[7] = true;
+        }
+        if (other.gameObject.name.Contains("Flower"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            info[8] = true;
+        }
+        if (other.gameObject.name.Contains("Stove"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            info[9] = true;
+        }
+        if (other.gameObject.name.Contains("door"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            info[10] = true;
+        }
+        if (other.gameObject.name.Contains("display"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            info[11] = true;
+        }
+        if (other.gameObject.name.Contains("pc"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            info[12] = true;
+        }
+        if (other.gameObject.name.Contains("server"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            info[13] = true;
+        }
+        if (other.gameObject.name.Contains("fire_"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            info[14] = true;
+        }
 
     }
 
@@ -159,30 +211,79 @@ public class MinigameStarter : MonoBehaviour
         }
         if (other.gameObject.name.Contains("axe"))
         {
-            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            info1 = false;
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[0] = false;
         }
         if (other.gameObject.name.Contains("shield"))
         {
-            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            info2 = false;
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[1] = false;
         }
         if (other.gameObject.name.Contains("glass"))
         {
-            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            info3 = false;
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[2] = false;
         }
         if (other.gameObject.name.Contains("jug"))
         {
-            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            info4 = false;
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[3] = false;
         }
         if (other.gameObject.name.Contains("Plate"))
         {
-            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            info5 = false;
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[4] = false;
         }
-        // To Do -> ostalih 10 predmeta
+        if (other.gameObject.name.Contains("bookcase"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[5] = false;
+        }
+        if (other.gameObject.name.Contains("Fireplace"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[6] = false;
+        }
+        if (other.gameObject.name.Contains("Curtain"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[7] = false;
+        }
+        if (other.gameObject.name.Contains("Flower"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[8] = false;
+        }
+        if (other.gameObject.name.Contains("Stove"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[9] = false;
+        }
+        if (other.gameObject.name.Contains("door"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[10] = false;
+        }
+        if (other.gameObject.name.Contains("display"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[11] = false;
+        }
+        if (other.gameObject.name.Contains("pc"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[12] = false;
+        }
+        if (other.gameObject.name.Contains("server"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[13] = false;
+        }
+        if (other.gameObject.name.Contains("fire_"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            info[14] = false;
+        }
     }
 
 
