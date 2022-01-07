@@ -19,7 +19,7 @@ public class LabGameMovePlayer : MonoBehaviour
         //button = gameObject.GetComponent<RectTransform>();
         //canvas = GameObject.Find("CanvasLab").GetComponent<RectTransform>();
         startingPosition = transform.position;
-        speed = 1.2f;
+        speed = 20.0f;
         touched = new bool[15];
     }
 

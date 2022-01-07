@@ -26,7 +26,7 @@ public class CounterGame : MonoBehaviour
             GameObject.Find("CanvasCounter").gameObject.transform.GetChild(1).gameObject.SetActive(true);
         }
         code = iField.text;
-        if (code == "6249")
+        if (code == "6636")
         {
             won = true;
         }
