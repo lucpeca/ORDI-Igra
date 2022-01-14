@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
@@ -10,19 +11,21 @@ public class MinigameStarter : MonoBehaviour
     public Canvas Canvas2;
     public Canvas Canvas3;
     public Canvas InfoCanvas;
+    public Canvas CanvasMenu;
     public GameObject Minigame1;
     public GameObject Minigame2;
     public GameObject Minigame3;
+    private bool allFalse = true;
 
 
 
     private bool entered1 = false;
     private bool entered2 = false;
     private bool entered3 = false;
+    private bool menuOpened = false;
 
     private List<bool> info = new List<bool>();
 
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +54,33 @@ public class MinigameStarter : MonoBehaviour
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             Canvas1.gameObject.SetActive(true);
         }
+
+        foreach (bool b in info)
+        {
+            if (b)
+            {
+                allFalse = false;
+                break;
+            }
+            else
+            {
+                allFalse = true;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape) && menuOpened == false &&
+            entered1 == false && entered2 == false && entered3 == false &&
+            allFalse == true
+            ) {
+            GetComponent<PlayerMovement>().enabled = false;
+            this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
+            menuOpened = true;
+            CanvasMenu.gameObject.SetActive(true);
+            CanvasMenu.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            CanvasMenu.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
 
         if (entered2 == true && Input.GetKeyDown("e"))
         {
@@ -92,10 +122,26 @@ public class MinigameStarter : MonoBehaviour
 
         }
 
+        if (Input.GetKeyDown("r") && menuOpened == true)
+        {
+            GetComponent<PlayerMovement>().enabled = true;
+            this.transform.GetChild(1).GetComponent<MouseLook>().enabled = true;
+            menuOpened = false;
+            CanvasMenu.gameObject.SetActive(false);
+            CanvasMenu.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            CanvasMenu.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        if (Input.GetKeyDown("x") && menuOpened == true)
+        {
+            GetComponent<PlayerMovement>().enabled = false;
+            this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
+            menuOpened = false;
+            Application.LoadLevel("Start");
+        }
+
 
 
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == Minigame1 && DotGame.won == false)

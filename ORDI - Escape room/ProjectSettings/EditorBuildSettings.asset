@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DotMinigame.unity
     guid: 30a712b7741d9564c8960ccbbb53478e
+  - enabled: 1
+    path: Assets/MedievalTavernPack/Scenes/Start.unity
+    guid: 4795d4fcdce328b4e9c7a64eeb85bee1
   m_configObjects: {}
