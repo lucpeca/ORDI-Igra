@@ -12,10 +12,21 @@ public class MinigameStarter : MonoBehaviour
     public Canvas Canvas3;
     public Canvas InfoCanvas;
     public Canvas CanvasMenu;
+    public Canvas CanvasEnd;
     public GameObject Minigame1;
     public GameObject Minigame2;
     public GameObject Minigame3;
     private bool allFalse = true;
+
+    private bool doorsOpen1 = false;
+    private bool doorsOpen2 = false;
+    private bool doorsOpen3 = false;
+    public GameObject doors1;
+    public GameObject doorsOpened1;
+    public GameObject doors2;
+    public GameObject doorsOpened2;
+    public GameObject doors3;
+    public GameObject doorsOpened3;
 
 
 
@@ -45,6 +56,32 @@ public class MinigameStarter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Doors
+
+        if (CounterGame.won && doorsOpen1 == false) {
+            doorsOpen1 = true;
+            doors1.gameObject.SetActive(false);
+            doorsOpened1.gameObject.SetActive(true);
+        }
+        if (DotGame.won && doorsOpen2 == false)
+        {
+            doorsOpen2 = true;
+            doors2.gameObject.SetActive(false);
+            doorsOpened2.gameObject.SetActive(true);
+        }
+        if (MovePlayer.won && doorsOpen3 == false)
+        {
+            doorsOpen3 = true;
+            doors3.gameObject.SetActive(false);
+            doorsOpened3.gameObject.SetActive(false);
+        }
+
+
+
+
+
+        //Inspect
+
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         if (entered1 == true && Input.GetKeyDown("e")) {
@@ -144,6 +181,9 @@ public class MinigameStarter : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.name == "EndGame") {
+            CanvasEnd.gameObject.SetActive(true);
+        }
         if (other.gameObject == Minigame1 && DotGame.won == false)
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
