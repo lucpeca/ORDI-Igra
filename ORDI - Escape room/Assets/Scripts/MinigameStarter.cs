@@ -13,6 +13,7 @@ public class MinigameStarter : MonoBehaviour
     public Canvas InfoCanvas;
     public Canvas CanvasMenu;
     public Canvas CanvasEnd;
+    public Canvas CanvasMain;
     public GameObject Minigame1;
     public GameObject Minigame2;
     public GameObject Minigame3;
@@ -195,6 +196,12 @@ public class MinigameStarter : MonoBehaviour
     {
         if (other.gameObject.name == "EndGame") {
             CanvasEnd.gameObject.SetActive(true);
+
+            CanvasEnd.gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.transform.GetComponent<Text>().text = CanvasEnd.gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.transform.GetComponent<Text>().text +
+                "\n" + "Your Score is" + "\n" + CanvasMain.gameObject.transform.GetChild(2).gameObject.GetComponent<Text>().text;
+
+            CanvasMain.GetComponent<Timer>().enabled = false;
+            
         }
         if (other.gameObject == Minigame1 && DotGame.won == false)
         {
