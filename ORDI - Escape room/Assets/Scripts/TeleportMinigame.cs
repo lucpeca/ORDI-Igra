@@ -13,10 +13,13 @@ public class TeleportMinigame : MonoBehaviour
     private GameObject gumbSpasa;
     private Vector3 returningPosition;
     private bool rutinaZaPovratak = false;
+    static public bool Won = false;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        Won = false;
         respawnPosition = new Vector3(31.2479992f, 1.03999996f, 9.46700001f);
         returningPosition = new Vector3(5.30499983f, 1.35000002f, 5.01000023f);
         floorOfDeath = GameObject.Find("PodSmrti");
@@ -39,7 +42,9 @@ public class TeleportMinigame : MonoBehaviour
         {
             if (spremanZaPovratak)
             {
+                Won = true;
                 StartCoroutine("TeleportBack");
+                GetComponent<TeleportMinigame>().enabled = false;
 
             }
         }
