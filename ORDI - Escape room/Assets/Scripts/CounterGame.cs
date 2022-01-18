@@ -45,6 +45,8 @@ public class CounterGame : MonoBehaviour
             GameObject.Find("CanvasCounter").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("CanvasCounter").gameObject.transform.GetChild(1).gameObject.SetActive(false);
             GameObject.Find("skripte").gameObject.GetComponent<CounterGame>().enabled = false;
+
+            GameObject.Find("SoundManager").GetComponent<AudioSource>().Stop();
         }
 
         if (won == true && winonce== false) {

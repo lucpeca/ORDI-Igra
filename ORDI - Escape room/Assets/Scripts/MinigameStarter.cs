@@ -15,10 +15,10 @@ public class MinigameStarter : MonoBehaviour
     public Canvas CanvasEnd;
     public Canvas CanvasMain;
     public Canvas CanvasLock;
-    public GameObject Minigame4;
     public GameObject Minigame1;
     public GameObject Minigame2;
     public GameObject Minigame3;
+    public GameObject Minigame4;
     private bool allFalse = true;
 
     private bool doorsOpen1 = false;
@@ -94,6 +94,10 @@ public class MinigameStarter : MonoBehaviour
             GameObject.Find("skripte").gameObject.GetComponent<DotGame>().enabled = true;
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             Canvas1.gameObject.SetActive(true);
+
+            int ranNum = Random.Range(1, 4);
+            string ranDots = "dots" + ranNum.ToString();
+            SoundManagerScript.PlaySound(ranDots);
         }
 
         foreach (bool b in info)
@@ -131,6 +135,10 @@ public class MinigameStarter : MonoBehaviour
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             Canvas2.gameObject.transform.GetChild(0).gameObject.SetActive(true);
             Canvas2.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+
+            int ranNum = Random.Range(1, 4);
+            string ranCount = "count" + ranNum.ToString();
+            SoundManagerScript.PlaySound(ranCount);
         }
 
         if (entered3 == true && Input.GetKeyDown("e"))
@@ -141,6 +149,10 @@ public class MinigameStarter : MonoBehaviour
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             Canvas3.gameObject.transform.GetChild(3).GetComponent<MovePlayer>().enabled = true;
             Canvas3.gameObject.SetActive(true);
+
+            int ranNum = Random.Range(1, 3);
+            string ranBoxes = "boxes" + ranNum.ToString();
+            SoundManagerScript.PlaySound(ranBoxes);
         }
         if (entered4 == true && Input.GetKeyDown("e"))
         {
@@ -148,6 +160,10 @@ public class MinigameStarter : MonoBehaviour
             this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             CanvasLock.gameObject.SetActive(true);
+
+            int ranNum = Random.Range(1, 2);
+            string ranGlass = "glass" + ranNum.ToString();
+            SoundManagerScript.PlaySound(ranGlass);
         }
 
         if (Input.GetKeyDown("e") && info[5]== true)
@@ -218,6 +234,7 @@ public class MinigameStarter : MonoBehaviour
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
             entered1 = true;
+
         }
         if (other.gameObject == Minigame2 && CounterGame.won == false)
         {

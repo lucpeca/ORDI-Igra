@@ -23,6 +23,23 @@ public class LabGameMovePlayer : MonoBehaviour
         touched = new bool[15];
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown("t"))
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            GameObject.Find("First Person Player").gameObject.GetComponent<PlayerMovement>().enabled = true;
+            GameObject.Find("First Person Player").gameObject.transform.GetChild(1)
+                .GetComponent<MouseLook>().enabled = true;
+            GameObject.Find("CanvasCounter").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("CanvasCounter").gameObject.transform.GetChild(1).gameObject.SetActive(false);
+            GameObject.Find("skripte").gameObject.GetComponent<LabGameMovePlayer>().enabled = false;
+
+            GameObject.Find("SoundManager").GetComponent<AudioSource>().Stop();
+        }
+    }
+
     void FixedUpdate()
     {
         if (Input.GetKey("w"))

@@ -22,10 +22,14 @@ public class TeleportMinigame : MonoBehaviour
         Won = false;
         respawnPosition = new Vector3(31.2479992f, 1.03999996f, 9.46700001f);
         returningPosition = new Vector3(5.30499983f, 1.35000002f, 5.01000023f);
+
         floorOfDeath = GameObject.Find("PodSmrti");
         gumbSpasa = GameObject.Find("GumbSpasa");
-        transform.position = respawnPosition;
         playerMovement = gameObject.GetComponent<PlayerMovement>();
+
+
+
+        StartCoroutine("StartTeleport");
     }
 
     // Update is called once per frame
@@ -43,8 +47,9 @@ public class TeleportMinigame : MonoBehaviour
             if (spremanZaPovratak)
             {
                 Won = true;
+
                 StartCoroutine("TeleportBack");
-                GetComponent<TeleportMinigame>().enabled = false;
+
 
             }
         }
@@ -77,6 +82,8 @@ public class TeleportMinigame : MonoBehaviour
         spremanZaPovratak = false;
         yield return new WaitForSeconds(0.01f);
         rutinaZaPovratak = false;
+        yield return new WaitForSeconds(0.01f);
+        GetComponent<TeleportMinigame>().enabled = false;
     }
     IEnumerator Teleport() {
         cekajMalo = true;
@@ -93,5 +100,15 @@ public class TeleportMinigame : MonoBehaviour
         playerMovement.disabled = false;
         yield return new WaitForSeconds(0.01f);
         cekajMalo = false;
+    }
+
+    IEnumerator StartTeleport()
+    {
+        yield return new WaitForSeconds(0.01f);
+        playerMovement.disabled = true;
+        yield return new WaitForSeconds(0.01f);
+        gameObject.transform.position = respawnPosition;
+        yield return new WaitForSeconds(0.01f);
+        playerMovement.disabled = false;
     }
 }

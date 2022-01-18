@@ -20,9 +20,8 @@ public class MovePlayer : MonoBehaviour
         speed = 3f;
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-
         if (Input.GetKeyDown("t"))
         {
             GameObject.Find("Dodge-minigame").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.red;
@@ -33,6 +32,10 @@ public class MovePlayer : MonoBehaviour
             gameObject.GetComponent<MovePlayer>().enabled = false;
 
         }
+    }
+
+    void FixedUpdate()
+    {
 
         if (won == true && winonce == false) {
             winonce = true;

@@ -18,7 +18,7 @@ public class MoveButton : MonoBehaviour
         speed = xcount;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (transform.position.y < 300) {
             speed = -speed;
