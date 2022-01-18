@@ -14,6 +14,8 @@ public class MinigameStarter : MonoBehaviour
     public Canvas CanvasMenu;
     public Canvas CanvasEnd;
     public Canvas CanvasMain;
+    public Canvas CanvasLock;
+    public GameObject Minigame4;
     public GameObject Minigame1;
     public GameObject Minigame2;
     public GameObject Minigame3;
@@ -34,6 +36,7 @@ public class MinigameStarter : MonoBehaviour
     private bool entered1 = false;
     private bool entered2 = false;
     private bool entered3 = false;
+    private bool entered4 = false;
     private bool menuOpened = false;
 
     private List<bool> info = new List<bool>();
@@ -70,7 +73,7 @@ public class MinigameStarter : MonoBehaviour
             doors2.gameObject.SetActive(false);
             doorsOpened2.gameObject.SetActive(true);
         }
-        if (MovePlayer.won && doorsOpen3 == false)
+        if (MovePlayer.won && doorsOpen3 == false && RotatingLock.won)
         {
             doorsOpen3 = true;
             doors3.gameObject.SetActive(false);
@@ -139,6 +142,14 @@ public class MinigameStarter : MonoBehaviour
             Canvas3.gameObject.transform.GetChild(3).GetComponent<MovePlayer>().enabled = true;
             Canvas3.gameObject.SetActive(true);
         }
+        if (entered4 == true && Input.GetKeyDown("e"))
+        {
+            GetComponent<PlayerMovement>().enabled = false;
+            this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            CanvasLock.gameObject.SetActive(true);
+        }
+
         if (Input.GetKeyDown("e") && info[5]== true)
         {
             if (TeleportMinigame.Won == false)
@@ -217,6 +228,11 @@ public class MinigameStarter : MonoBehaviour
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
             entered3 = true;
+        }
+        if (other.gameObject == Minigame4 && RotatingLock.won == false)
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            entered4 = true;
         }
         if (other.gameObject.name.Contains("axe")) {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
@@ -315,6 +331,12 @@ public class MinigameStarter : MonoBehaviour
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             Canvas3.gameObject.SetActive(false);
             entered3 = false;
+        }
+        if (other.gameObject == Minigame4)
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            Canvas3.gameObject.SetActive(false);
+            entered4 = false;
         }
         if (other.gameObject.name.Contains("axe"))
         {

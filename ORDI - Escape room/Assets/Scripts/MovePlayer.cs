@@ -17,10 +17,10 @@ public class MovePlayer : MonoBehaviour
         button = gameObject.GetComponent<RectTransform>();
         canvas = GameObject.Find("CanvasLab").GetComponent<RectTransform>();
         startingPosition = transform.position;
-        speed = 1.2f;
+        speed = 3f;
     }
 
-    void Update()
+    void FixedUpdate()
     {
 
         if (Input.GetKeyDown("t"))
