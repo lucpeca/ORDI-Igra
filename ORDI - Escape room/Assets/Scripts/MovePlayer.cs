@@ -19,10 +19,7 @@ public class MovePlayer : MonoBehaviour
         startingPosition = transform.position;
         speed = 3f;
     }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
     private void Update()
     {
         if (Input.GetKeyDown("t"))
@@ -36,15 +33,10 @@ public class MovePlayer : MonoBehaviour
 
         }
     }
-<<<<<<< Updated upstream
 
     void FixedUpdate()
     {
 
-=======
-    void FixedUpdate()
-    {
->>>>>>> Stashed changes
         if (won == true && winonce == false) {
             winonce = true;
             GameObject.Find("Dodge-minigame").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.green;
