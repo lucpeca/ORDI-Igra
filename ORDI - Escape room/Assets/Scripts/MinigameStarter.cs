@@ -13,6 +13,7 @@ public class MinigameStarter : MonoBehaviour
     public Canvas InfoCanvas;
     public Canvas CanvasMenu;
     public Canvas CanvasEnd;
+    public Canvas CanvasMain;
     public GameObject Minigame1;
     public GameObject Minigame2;
     public GameObject Minigame3;
@@ -58,7 +59,7 @@ public class MinigameStarter : MonoBehaviour
     {
         //Doors
 
-        if (CounterGame.won && doorsOpen1 == false) {
+        if (CounterGame.won && doorsOpen1 == false && TeleportMinigame.Won) {
             doorsOpen1 = true;
             doors1.gameObject.SetActive(false);
             doorsOpened1.gameObject.SetActive(true);
@@ -138,9 +139,16 @@ public class MinigameStarter : MonoBehaviour
             Canvas3.gameObject.transform.GetChild(3).GetComponent<MovePlayer>().enabled = true;
             Canvas3.gameObject.SetActive(true);
         }
+        if (Input.GetKeyDown("e") && info[5]== true)
+        {
+            if (TeleportMinigame.Won == false)
+            {
+                GetComponent<TeleportMinigame>().enabled = true;
+            }
+        }
 
 
-        foreach (int value in Enumerable.Range(1, 15)) {
+            foreach (int value in Enumerable.Range(1, 15)) {
             if (info[value - 1] == true && Input.GetKeyDown("t"))
             {
                 GetComponent<PlayerMovement>().enabled = true;
@@ -151,11 +159,16 @@ public class MinigameStarter : MonoBehaviour
 
             if (info[value - 1] == true && Input.GetKeyDown("e"))
             {
-                GetComponent<PlayerMovement>().enabled = false;
-                this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
-                GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                InfoCanvas.gameObject.transform.GetChild(value).gameObject.SetActive(true);
+                if (info[5] == true && TeleportMinigame.Won == false) { }
+                else
+                {
+                    GetComponent<PlayerMovement>().enabled = false;
+                    this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
+                    GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                    InfoCanvas.gameObject.transform.GetChild(value).gameObject.SetActive(true);
+                }
             }
+
 
         }
 
@@ -183,6 +196,12 @@ public class MinigameStarter : MonoBehaviour
     {
         if (other.gameObject.name == "EndGame") {
             CanvasEnd.gameObject.SetActive(true);
+
+            CanvasEnd.gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.transform.GetComponent<Text>().text = CanvasEnd.gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.transform.GetComponent<Text>().text +
+                "\n" + "Your Score is" + "\n" + CanvasMain.gameObject.transform.GetChild(2).gameObject.GetComponent<Text>().text;
+
+            CanvasMain.GetComponent<Timer>().enabled = false;
+            
         }
         if (other.gameObject == Minigame1 && DotGame.won == false)
         {
@@ -225,9 +244,11 @@ public class MinigameStarter : MonoBehaviour
         }
         if (other.gameObject.name.Contains("bookcase"))
         {
+ 
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
             info[5] = true;
         }
+       
         if (other.gameObject.name.Contains("Fireplace"))
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
