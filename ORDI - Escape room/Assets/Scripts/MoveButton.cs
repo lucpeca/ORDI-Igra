@@ -14,7 +14,7 @@ public class MoveButton : MonoBehaviour
         button = gameObject.GetComponent<RectTransform>();
         canvas = GameObject.Find("CanvasLab").GetComponent<RectTransform>();
         startingPosition = transform.position;
-        int xcount = Random.Range(1, 3);
+        int xcount = Random.Range(1, 5);
         //int xcount = Random.Range(3, 10);
         speed = xcount;
     }
