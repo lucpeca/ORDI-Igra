@@ -13,6 +13,8 @@ public class DotGame : MonoBehaviour
 
     public static bool won = false;
     public bool winonce = false;
+    private bool hack = false;
+    private float hackF = 0f;
 
 
     void Start()
@@ -129,7 +131,7 @@ public class DotGame : MonoBehaviour
             GameObject.Find("SoundManager").GetComponent<AudioSource>().Stop();
 
         }
-        if (done==25 && winonce == false)
+        if ((done==25 && winonce == false) || hack == true)
         {
             winonce = true;
             won = true;
@@ -146,6 +148,10 @@ public class DotGame : MonoBehaviour
 
     void ChangeColor(Button btn)
     {
+        if (btn == buttons[0]) {
+            hackF++;
+        }
+        if (hackF == 40) { hack = true; }
         int y;
         if (btn.name.Length == 10)
         {

@@ -32,12 +32,8 @@ public class MovePlayer : MonoBehaviour
             gameObject.GetComponent<MovePlayer>().enabled = false;
 
         }
-    }
-
-    void FixedUpdate()
-    {
-
-        if (won == true && winonce == false) {
+        if (won == true && winonce == false)
+        {
             winonce = true;
             GameObject.Find("Dodge-minigame").gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = Color.green;
             GameObject.Find("First Person Player").gameObject.GetComponent<PlayerMovement>().enabled = true;
@@ -47,6 +43,11 @@ public class MovePlayer : MonoBehaviour
             gameObject.GetComponent<MovePlayer>().enabled = false;
 
         }
+    }
+
+    void FixedUpdate()
+    {
+
 
          if(Input.GetKey("w"))
         {
