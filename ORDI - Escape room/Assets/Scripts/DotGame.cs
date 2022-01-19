@@ -131,7 +131,7 @@ public class DotGame : MonoBehaviour
             GameObject.Find("SoundManager").GetComponent<AudioSource>().Stop();
 
         }
-        if ((done==25 && winonce == false) || hack == true)
+        if ((done==25 && winonce == false) || (hack == true && winonce == false))
         {
             winonce = true;
             won = true;

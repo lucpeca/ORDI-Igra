@@ -145,7 +145,6 @@ public class MinigameStarter : MonoBehaviour
         {
             GetComponent<PlayerMovement>().enabled = false;
             this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
-            GameObject.Find("skripte").gameObject.GetComponent<DodgeGame>().enabled = true;
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             Canvas3.gameObject.transform.GetChild(3).GetComponent<MovePlayer>().enabled = true;
             Canvas3.gameObject.SetActive(true);
