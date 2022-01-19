@@ -33,9 +33,6 @@ public class RotatingLock : MonoBehaviour
         Button button15 = CanvasLock.transform.GetChild(16).gameObject.GetComponent<Button>();
         Button button16 = CanvasLock.transform.GetChild(17).gameObject.GetComponent<Button>();
         Button button17 = CanvasLock.transform.GetChild(18).gameObject.GetComponent<Button>();
-        Button button18 = CanvasLock.transform.GetChild(19).gameObject.GetComponent<Button>();
-        Button button19 = CanvasLock.transform.GetChild(20).gameObject.GetComponent<Button>();
-        Button button20 = CanvasLock.transform.GetChild(21).gameObject.GetComponent<Button>();
 
 
         clickButtons.Add(button0);
@@ -56,9 +53,6 @@ public class RotatingLock : MonoBehaviour
         rotatingButtons.Add(button15);
         rotatingButtons.Add(button16);
         rotatingButtons.Add(button17);
-        rotatingButtons.Add(button18);
-        rotatingButtons.Add(button19);
-        rotatingButtons.Add(button20);
 
         foreach (Button btn in rotatingButtons)
         {
@@ -66,15 +60,13 @@ public class RotatingLock : MonoBehaviour
             btn.GetComponent<Image>().color = Color.red;
         }
         button8.GetComponent<Image>().color = Color.green;
+        button5.GetComponent<Image>().color = Color.green;
         button7.GetComponent<Image>().color = Color.green;
         button10.GetComponent<Image>().color = Color.green;
         button12.GetComponent<Image>().color = Color.green;
         button14.GetComponent<Image>().color = Color.green;
-        button4.GetComponent<Image>().color = Color.green;
-        button15.GetComponent<Image>().color = Color.green;
-        button17.GetComponent<Image>().color = Color.green;
 
-
+        
         button0.onClick.AddListener(BtnClick1);
         button1.onClick.AddListener(BtnClick2);
         button2.onClick.AddListener(BtnClick3);
@@ -82,14 +74,12 @@ public class RotatingLock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rotatingButtons[7].GetComponent<Image>().color == Color.green &&
-            rotatingButtons[10].GetComponent<Image>().color == Color.green &&
-            rotatingButtons[11].GetComponent<Image>().color == Color.green &&
-            rotatingButtons[13].GetComponent<Image>().color == Color.green &&
+        if (rotatingButtons[8].GetComponent<Image>().color == Color.green &&
+            rotatingButtons[9].GetComponent<Image>().color == Color.green &&
+            rotatingButtons[12].GetComponent<Image>().color == Color.green &&
             rotatingButtons[14].GetComponent<Image>().color == Color.green &&
-            rotatingButtons[15].GetComponent<Image>().color == Color.green &&
-            rotatingButtons[16].GetComponent<Image>().color == Color.green &&
-            rotatingButtons[17].GetComponent<Image>().color == Color.green) {
+            rotatingButtons[13].GetComponent<Image>().color == Color.green &&
+            rotatingButtons[11].GetComponent<Image>().color == Color.green) {
             won = true;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
@@ -102,39 +92,35 @@ public class RotatingLock : MonoBehaviour
 
     }
     public void BtnClick1(){
-        pom.GetComponent<Image>().color = rotatingButtons[1].GetComponent<Image>().color;
-        rotatingButtons[1].GetComponent<Image>().color = rotatingButtons[5].GetComponent<Image>().color;
-        rotatingButtons[5].GetComponent<Image>().color = rotatingButtons[8].GetComponent<Image>().color;
-        rotatingButtons[8].GetComponent<Image>().color = rotatingButtons[12].GetComponent<Image>().color;
-        rotatingButtons[12].GetComponent<Image>().color = rotatingButtons[14].GetComponent<Image>().color;
-        rotatingButtons[14].GetComponent<Image>().color = rotatingButtons[11].GetComponent<Image>().color;
-        rotatingButtons[11].GetComponent<Image>().color = rotatingButtons[7].GetComponent<Image>().color;
-        rotatingButtons[7].GetComponent<Image>().color = rotatingButtons[4].GetComponent<Image>().color;
-        rotatingButtons[4].GetComponent<Image>().color = pom.GetComponent<Image>().color;
+        Debug.Log("hi");
+        pom.GetComponent<Image>().color = rotatingButtons[2].GetComponent<Image>().color;
+        rotatingButtons[2].GetComponent<Image>().color = rotatingButtons[3].GetComponent<Image>().color;
+        rotatingButtons[3].GetComponent<Image>().color = rotatingButtons[6].GetComponent<Image>().color;
+        rotatingButtons[6].GetComponent<Image>().color = rotatingButtons[10].GetComponent<Image>().color;
+        rotatingButtons[10].GetComponent<Image>().color = rotatingButtons[9].GetComponent<Image>().color;
+        rotatingButtons[9].GetComponent<Image>().color = rotatingButtons[5].GetComponent<Image>().color;
+        rotatingButtons[5].GetComponent<Image>().color = pom.GetComponent<Image>().color;
     }
     public void BtnClick2()
     {
 
-        pom.GetComponent<Image>().color = rotatingButtons[0].GetComponent<Image>().color;
-        rotatingButtons[0].GetComponent<Image>().color = rotatingButtons[3].GetComponent<Image>().color;
-        rotatingButtons[3].GetComponent<Image>().color = rotatingButtons[7].GetComponent<Image>().color;
-        rotatingButtons[7].GetComponent<Image>().color = rotatingButtons[10].GetComponent<Image>().color;
-        rotatingButtons[10].GetComponent<Image>().color = rotatingButtons[13].GetComponent<Image>().color;
-        rotatingButtons[13].GetComponent<Image>().color = rotatingButtons[9].GetComponent<Image>().color;
-        rotatingButtons[9].GetComponent<Image>().color = rotatingButtons[6].GetComponent<Image>().color;
-        rotatingButtons[6].GetComponent<Image>().color = rotatingButtons[2].GetComponent<Image>().color;
-        rotatingButtons[2].GetComponent<Image>().color = pom.GetComponent<Image>().color;
+        Debug.Log("hi2");
+        pom.GetComponent<Image>().color = rotatingButtons[4].GetComponent<Image>().color;
+        rotatingButtons[4].GetComponent<Image>().color = rotatingButtons[0].GetComponent<Image>().color;
+        rotatingButtons[0].GetComponent<Image>().color = rotatingButtons[1].GetComponent<Image>().color;
+        rotatingButtons[1].GetComponent<Image>().color = rotatingButtons[5].GetComponent<Image>().color;
+        rotatingButtons[5].GetComponent<Image>().color = rotatingButtons[8].GetComponent<Image>().color;
+        rotatingButtons[8].GetComponent<Image>().color = rotatingButtons[7].GetComponent<Image>().color;
+        rotatingButtons[7].GetComponent<Image>().color = pom.GetComponent<Image>().color;
     }
     public void BtnClick3()
     {
-        pom.GetComponent<Image>().color = rotatingButtons[11].GetComponent<Image>().color;
-        rotatingButtons[11].GetComponent<Image>().color = rotatingButtons[14].GetComponent<Image>().color;
-        rotatingButtons[14].GetComponent<Image>().color = rotatingButtons[16].GetComponent<Image>().color;
-        rotatingButtons[16].GetComponent<Image>().color = rotatingButtons[17].GetComponent<Image>().color;
-        rotatingButtons[17].GetComponent<Image>().color = rotatingButtons[15].GetComponent<Image>().color;
-        rotatingButtons[15].GetComponent<Image>().color = rotatingButtons[13].GetComponent<Image>().color;
-        rotatingButtons[13].GetComponent<Image>().color = rotatingButtons[10].GetComponent<Image>().color;
-        rotatingButtons[10].GetComponent<Image>().color = rotatingButtons[7].GetComponent<Image>().color;
-        rotatingButtons[7].GetComponent<Image>().color = pom.GetComponent<Image>().color;
+        pom.GetComponent<Image>().color = rotatingButtons[8].GetComponent<Image>().color;
+        rotatingButtons[8].GetComponent<Image>().color = rotatingButtons[9].GetComponent<Image>().color;
+        rotatingButtons[9].GetComponent<Image>().color = rotatingButtons[12].GetComponent<Image>().color;
+        rotatingButtons[12].GetComponent<Image>().color = rotatingButtons[14].GetComponent<Image>().color;
+        rotatingButtons[14].GetComponent<Image>().color = rotatingButtons[13].GetComponent<Image>().color;
+        rotatingButtons[13].GetComponent<Image>().color = rotatingButtons[11].GetComponent<Image>().color;
+        rotatingButtons[11].GetComponent<Image>().color = pom.GetComponent<Image>().color;
     }
 }
