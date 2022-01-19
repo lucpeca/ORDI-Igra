@@ -15,6 +15,7 @@ public class MinigameStarter : MonoBehaviour
     public Canvas CanvasEnd;
     public Canvas CanvasMain;
     public Canvas CanvasLock;
+    public Canvas KeyPadCanvas;
     public GameObject Minigame1;
     public GameObject Minigame2;
     public GameObject Minigame3;
@@ -38,6 +39,7 @@ public class MinigameStarter : MonoBehaviour
     private bool entered3 = false;
     private bool entered4 = false;
     private bool menuOpened = false;
+    private bool keypad = false;
 
     private List<bool> info = new List<bool>();
 
@@ -62,7 +64,7 @@ public class MinigameStarter : MonoBehaviour
     {
         //Doors
 
-        if (CounterGame.won && doorsOpen1 == false && TeleportMinigame.Won) {
+        if (CounterGame.won && doorsOpen1 == false && TeleportMinigame.Won && KeyPad.won1) {
             doorsOpen1 = true;
             doors1.gameObject.SetActive(false);
             doorsOpened1.gameObject.SetActive(true);
@@ -129,6 +131,7 @@ public class MinigameStarter : MonoBehaviour
 
         if (entered2 == true && Input.GetKeyDown("e"))
         {
+            Debug.Log("hi");
             GetComponent<PlayerMovement>().enabled = false;
             this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
             GameObject.Find("skripte").gameObject.GetComponent<CounterGame>().enabled = true;
@@ -181,6 +184,10 @@ public class MinigameStarter : MonoBehaviour
                 this.transform.GetChild(1).GetComponent<MouseLook>().enabled = true;
                 GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
                 InfoCanvas.gameObject.transform.GetChild(value).gameObject.SetActive(false);
+                KeyPadCanvas.gameObject.SetActive(false);
+                KeyPadCanvas.gameObject.transform.GetComponent<KeyPad>().enabled = false;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
             }
 
             if (info[value - 1] == true && Input.GetKeyDown("e"))
@@ -188,10 +195,23 @@ public class MinigameStarter : MonoBehaviour
                 if (info[5] == true && TeleportMinigame.Won == false) { }
                 else
                 {
+                    if (info[10] == true && !keypad) { //keypad
+
+                        KeyPadCanvas.gameObject.SetActive(true);
+                        KeyPadCanvas.gameObject.transform.GetComponent<KeyPad>().enabled = true;
+                        GetComponent<PlayerMovement>().enabled = false;
+                        this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
+                        GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                        Cursor.visible = true;
+                        Cursor.lockState = CursorLockMode.None;
+
+
+                    }
+                    else { 
                     GetComponent<PlayerMovement>().enabled = false;
                     this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
                     GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                    InfoCanvas.gameObject.transform.GetChild(value).gameObject.SetActive(true);
+                    InfoCanvas.gameObject.transform.GetChild(value).gameObject.SetActive(true); }
                 }
             }
 

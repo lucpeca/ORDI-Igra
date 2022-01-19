@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TeleportMinigame : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class TeleportMinigame : MonoBehaviour
     private Vector3 returningPosition;
     private bool rutinaZaPovratak = false;
     static public bool Won = false;
+    public Canvas Cnv;
+    private bool winonce = false;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +50,10 @@ public class TeleportMinigame : MonoBehaviour
             if (spremanZaPovratak)
             {
                 Won = true;
-
+                if (winonce == false) { 
+                Cnv.transform.GetChild(3).gameObject.GetComponent<Text>().text = Cnv.transform.GetChild(3).gameObject.GetComponent<Text>().text + " 33";
+                    winonce = true;
+            }
                 StartCoroutine("TeleportBack");
 
 
