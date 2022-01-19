@@ -43,7 +43,7 @@ public class KeyPad : MonoBehaviour
 
         if (iField.text.Length == 5) {
             Debug.Log(iField.text);
-            if (iField.text == "3357G")
+            if (iField.text == "3357G" && won1 == false)
             {
                 this.gameObject.transform.GetChild(13).gameObject.SetActive(false);
                 KeyPad.won1 = true;

@@ -195,7 +195,9 @@ public class MinigameStarter : MonoBehaviour
                 if (info[5] == true && TeleportMinigame.Won == false) { }
                 else
                 {
-                    if (info[10] == true && !keypad) { //keypad
+                    if (info[10] == true &&
+                        !KeyPad.won1)
+                    { //keypad
 
                         KeyPadCanvas.gameObject.SetActive(true);
                         KeyPadCanvas.gameObject.transform.GetComponent<KeyPad>().enabled = true;
@@ -207,11 +209,16 @@ public class MinigameStarter : MonoBehaviour
 
 
                     }
-                    else { 
-                    GetComponent<PlayerMovement>().enabled = false;
-                    this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
-                    GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                    InfoCanvas.gameObject.transform.GetChild(value).gameObject.SetActive(true); }
+                    else
+                    {
+                        info[10] = false;
+                        GetComponent<PlayerMovement>().enabled = false;
+                        this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
+                        GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                        if (value != 11) { 
+                        InfoCanvas.gameObject.transform.GetChild(value).gameObject.SetActive(true);
+                    }
+                }
                 }
             }
 
@@ -321,7 +328,7 @@ public class MinigameStarter : MonoBehaviour
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
             info[9] = true;
         }
-        if (other.gameObject.name.Contains("door"))
+        if (other.gameObject.name.Contains("door1"))
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
             info[10] = true;
@@ -424,7 +431,7 @@ public class MinigameStarter : MonoBehaviour
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             info[9] = false;
         }
-        if (other.gameObject.name.Contains("door"))
+        if (other.gameObject.name.Contains("door1"))
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             info[10] = false;
