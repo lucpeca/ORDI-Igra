@@ -9,6 +9,7 @@ public class KeyPad : MonoBehaviour
     public List<Button> btns;
     private InputField iField;
     public static bool won1 = false;
+    public static bool won2 = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class KeyPad : MonoBehaviour
         this.gameObject.transform.GetChild(13).gameObject.SetActive(false);
         iField = this.gameObject.transform.GetChild(0).gameObject.GetComponent<InputField>();
         won1 = false;
+        won2 = false;
 
         foreach (Button btn in btns)
         {
@@ -40,9 +42,34 @@ public class KeyPad : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
+        if (iField.text.Length == 0) {
+            this.gameObject.transform.GetChild(13).gameObject.SetActive(false);
+        }
         if (iField.text.Length == 5) {
-            Debug.Log(iField.text);
+
+            if (iField.text == "3412G" && won2 == false && won1 == true)
+            {
+                this.gameObject.transform.GetChild(13).gameObject.SetActive(false);
+                KeyPad.won2 = true;
+
+                this.gameObject.SetActive(false);
+                this.gameObject.transform.GetComponent<KeyPad>().enabled = false;
+                GameObject.Find("First Person Player").gameObject.GetComponent<PlayerMovement>().enabled = true;
+                GameObject.Find("First Person Player").gameObject.transform.GetChild(1)
+                    .GetComponent<MouseLook>().enabled = true;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                GameObject.Find("Canvas").gameObject.transform.GetChild(3).gameObject.GetComponent<Text>().text = "Codes:";
+
+
+            }
+            else if (won2 == false && won1 == true)
+            {
+                iField.text = "";
+                this.gameObject.transform.GetChild(13).gameObject.SetActive(true);
+            }
+
+
             if (iField.text == "3357G" && won1 == false)
             {
                 this.gameObject.transform.GetChild(13).gameObject.SetActive(false);
@@ -59,10 +86,13 @@ public class KeyPad : MonoBehaviour
 
 
             }
-            else {
+            else if(won1 == false) {
                 iField.text = "";
                 this.gameObject.transform.GetChild(13).gameObject.SetActive(true);
             }
+
+
+            
         }
         if (iField.text.Contains("G") && won1 == false) {
             iField.text = "";

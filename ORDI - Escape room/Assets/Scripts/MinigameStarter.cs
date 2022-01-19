@@ -40,6 +40,7 @@ public class MinigameStarter : MonoBehaviour
     private bool entered4 = false;
     private bool menuOpened = false;
     private bool keypad = false;
+    private bool Last = false;
 
     private List<bool> info = new List<bool>();
 
@@ -75,7 +76,7 @@ public class MinigameStarter : MonoBehaviour
             doors2.gameObject.SetActive(false);
             doorsOpened2.gameObject.SetActive(true);
         }
-        if (MovePlayer.won && doorsOpen3 == false && RotatingLock.won)
+        if (MovePlayer.won && doorsOpen3 == false && RotatingLock.won && KeyPad.won2)
         {
             doorsOpen3 = true;
             doors3.gameObject.SetActive(false);
@@ -142,6 +143,18 @@ public class MinigameStarter : MonoBehaviour
             int ranNum = Random.Range(1, 4);
             string ranCount = "count" + ranNum.ToString();
             SoundManagerScript.PlaySound(ranCount);
+        }
+
+        if (Last == true && Input.GetKeyDown("e")) {
+
+            KeyPadCanvas.gameObject.SetActive(true);
+            KeyPadCanvas.gameObject.transform.GetComponent<KeyPad>().enabled = true;
+            GetComponent<PlayerMovement>().enabled = false;
+            this.transform.GetChild(1).GetComponent<MouseLook>().enabled = false;
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+
         }
 
         if (entered3 == true && Input.GetKeyDown("e"))
@@ -353,6 +366,11 @@ public class MinigameStarter : MonoBehaviour
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
             info[14] = true;
         }
+        if (other.gameObject.name.Contains("tabletLast"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            Last = true;
+        }
 
     }
 
@@ -455,6 +473,11 @@ public class MinigameStarter : MonoBehaviour
         {
             GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             info[14] = false;
+        }
+        if (other.gameObject.name.Contains("tabletLast"))
+        {
+            GameObject.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            Last = false;
         }
     }
 

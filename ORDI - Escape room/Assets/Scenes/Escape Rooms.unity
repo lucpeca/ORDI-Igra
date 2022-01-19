@@ -9222,9 +9222,9 @@ BoxCollider:
   m_GameObject: {fileID: 473441857}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 3, z: 1.5}
+  m_Size: {x: 0.2, y: 3, z: 1.5}
   m_Center: {x: 0.2, y: 0.44056097, z: -0.00000002980233}
 --- !u!1001 &478964693
 PrefabInstance:
@@ -21208,6 +21208,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9ddf028af1fa1714489962e5dab4a416, type: 3}
   m_PrefabInstance: {fileID: 1262629715}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1263775499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1774661282298506559, guid: b7c323073beeb0b42a8412d881577235, type: 3}
+  m_PrefabInstance: {fileID: 2007812638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1263775500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263775499}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1, z: 1}
+  m_Center: {x: 0, y: -0.00021401791, z: 0.0006743411}
 --- !u!1 &1268640850
 GameObject:
   m_ObjectHideFlags: 0
@@ -34328,15 +34346,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1435255905258764165, guid: b7c323073beeb0b42a8412d881577235, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.748
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 1435255905258764165, guid: b7c323073beeb0b42a8412d881577235, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.04
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 1435255905258764165, guid: b7c323073beeb0b42a8412d881577235, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.99
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 1435255905258764165, guid: b7c323073beeb0b42a8412d881577235, type: 3}
       propertyPath: m_LocalRotation.w
@@ -34368,7 +34386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1774661282298506559, guid: b7c323073beeb0b42a8412d881577235, type: 3}
       propertyPath: m_Name
-      value: tablet
+      value: tabletLast
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7c323073beeb0b42a8412d881577235, type: 3}
