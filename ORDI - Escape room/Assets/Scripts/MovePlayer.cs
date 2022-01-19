@@ -18,6 +18,9 @@ public class MovePlayer : MonoBehaviour
         canvas = GameObject.Find("CanvasLab").GetComponent<RectTransform>();
         startingPosition = transform.position;
         speed = 3f;
+        GameObject.Find("First Person Player").gameObject.GetComponent<PlayerMovement>().enabled = false;
+        GameObject.Find("First Person Player").gameObject.transform.GetChild(1)
+            .GetComponent<MouseLook>().enabled = false;
     }
 
     private void Update()

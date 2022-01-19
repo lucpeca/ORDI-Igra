@@ -8,6 +8,11 @@ public class Timer : MonoBehaviour
     float initialTime;
     public GameObject Num;
     private bool started = false;
+    public float StartTime = 500;
+    public float TimePerLvl = 120;
+    private float StartTimeTxt;
+    private bool AddFirst, AddSecond;
+    public Canvas CanvasMain, CanvasEnd, CanvasLab;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,14 +23,37 @@ public class Timer : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("w") || Input.GetKeyDown("s") || Input.GetKeyDown("a") || Input.GetKeyDown("d") || Input.GetKeyDown("x")) {
-            if (started == false) { 
-            initialTime = Time.time; }
+            if (started == false) {
+                initialTime = Time.time; }
             started = true;
         }
-        if (started == true)
+        if (started == true && !(StartTimeTxt < 0))
         {
             float TimeTaken = Time.time - initialTime;
-            Num.GetComponent<Text>().text = TimeTaken.ToString("f2");
+            StartTimeTxt = StartTime - TimeTaken;
+            Num.GetComponent<Text>().text = StartTimeTxt.ToString("f2");
+        }
+        if (DotGame.won && AddFirst) { StartTime = StartTime + TimePerLvl; }
+
+        if (CounterGame.won && AddSecond && TeleportMinigame.Won) { StartTime = StartTime + TimePerLvl; }
+
+        if (StartTimeTxt < 0) {
+            CanvasEnd.gameObject.SetActive(true);
+
+            CanvasEnd.gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.transform.GetComponent<Text>().text =
+                "\n" + "Game Over!" + "\n \n" + "I guess you suck!" + "\n \n" + "X to Exit";
+            
+            GameObject.Find("First Person Player").gameObject.GetComponent<PlayerMovement>().enabled = false;
+            GameObject.Find("First Person Player").gameObject.transform.GetChild(1)
+                .GetComponent<MouseLook>().enabled = false;
+
+            CanvasLab.gameObject.transform.GetChild(3).gameObject.GetComponent<MovePlayer>().enabled = false;
+            GameObject.Find("skripte").gameObject.GetComponent<DotGame>().enabled = false;
+            GameObject.Find("skripte").gameObject.GetComponent<CounterGame>().enabled = false;
+            if (Input.GetKeyDown("x")) {
+
+                Application.LoadLevel("Start");
+            }
         }
     }
 }
